@@ -1,8 +1,7 @@
 # Expense Trcking Project
 
 ## Overview
-
-This project is a [brief description of your React project]. It provides [key functionality or features]. The goal of this project is to [purpose or objective of the project].
+Managing personal finances is a challenge in today’s complex financial landscape. This web application provides a modern solution to track, manage, and analyze expenses with advanced features like categorization, budgeting tools, and data visualization. Users can set expenses, track spending patterns, and receive insights for financial optimization. The application supports secure multi-user access and integration with external tools like bank APIs. 
 
 ## Table of Contents
 
@@ -23,8 +22,6 @@ This project is a [brief description of your React project]. It provides [key fu
    ```bash
    npm install
    ```
-   
-. ├── node_modules/ # Project dependencies ├── src/ # Source code folder │ ├── components/ # Reusable components │ ├── contexts/ # Context providers │ ├── lib/ # Utility and library functions │ ├── pages/ # Application pages │ ├── App.tsx # Main app component │ └── index.css # Global CSS styles ├── supabase/ # Supabase configuration and files ├── .env # Environment variables ├── .gitignore # Files to ignore in git ├── eslint.config.js # ESLint configuration ├── index.html # Entry point HTML file ├── package.json # NPM project configuration ├── package-lock.json # Lock file for dependencies ├── postcss.config.js # PostCSS configuration ├── tailwind.config.js # Tailwind CSS configuration ├── tsconfig.app.json # TypeScript configuration ├── vite-env.d.ts # Vite environment types └── README.md # Project documentation
 
 ## Usage
 
