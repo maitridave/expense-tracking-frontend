@@ -19,11 +19,16 @@ export default function Layout() {
   }
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen flex flex-col bg-gray-50">
       <Navbar />
-      <main className="container mx-auto px-4 py-8">
+      <main className="container mx-auto px-4 py-8 flex-grow">
         <Outlet />
       </main>
+      <footer className="bg-gray-800 text-white py-4">
+        <div className="container mx-auto text-left">
+          &copy; {new Date().getFullYear()} Expense Tracker. All rights reserved.
+        </div>
+      </footer>
     </div>
   );
 }
