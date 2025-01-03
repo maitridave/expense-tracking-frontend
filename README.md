@@ -5,8 +5,6 @@ Managing personal finances is a challenge in today’s complex financial landsca
 
 Effortlessly manage your finances with our intuitive web application. Track expenses, categorize spending, and gain valuable insights into your financial health.
 
-Key Features:
-
 **Key Features:**
 
 * **Effortless Expense Tracking:** Easily add, edit, and delete expenses with a user-friendly interface.
