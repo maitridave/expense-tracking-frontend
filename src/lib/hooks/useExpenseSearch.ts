@@ -27,7 +27,7 @@ export function useExpenseSearch(expenses: ExpenseWithCategory[]) {
         (!dateRange.end || expense.date <= dateRange.end);
 
       // Category filter
-      const categoryMatch = !selectedCategory || expense.category_id === selectedCategory;
+      const categoryMatch = !selectedCategory || expense.categoryid === selectedCategory;
 
       // Amount range filter
       const amountMatch =

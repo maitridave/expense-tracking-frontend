@@ -13,7 +13,7 @@ export default function ExpenseForm({ initialValues, onSubmit, submitLabel }: Ex
   const navigate = useNavigate();
   const [categories, setCategories] = useState<Category[]>([]);
   const [amount, setAmount] = useState(initialValues?.amount?.toString() || '');
-  const [categoryId, setCategoryId] = useState(initialValues?.category_id || '');
+  const [categoryId, setCategoryId] = useState(initialValues?.categoryid || '');
   const [description, setDescription] = useState(initialValues?.description || '');
   const [date, setDate] = useState(initialValues?.date || new Date().toISOString().split('T')[0]);
   const [error, setError] = useState('');
@@ -31,12 +31,13 @@ export default function ExpenseForm({ initialValues, onSubmit, submitLabel }: Ex
     try {
       await onSubmit({
         amount: parseFloat(amount),
-        category_id: categoryId,
+        categoryId: categoryId,
         description,
         date,
       });
       navigate('/dashboard');
     } catch (err) {
+      debugger;
       setError('Failed to save expense');
     } finally {
       setLoading(false);
