@@ -31,8 +31,8 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
     // Implement your own sign-in logic
     // Example: Call your API to authenticate the user
     const response = await apiClient.post('/auth/signin', { email, password });
-    debugger;
-    const userData = response.data;
+    const userData = response.value.user;
+    localStorage.setItem('token', response.value.token);
     setUser(userData);
     localStorage.setItem('user', JSON.stringify(userData));
     navigate('/dashboard');

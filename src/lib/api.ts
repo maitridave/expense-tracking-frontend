@@ -4,7 +4,13 @@ const API_URL = 'https://localhost:51522/api';
 
 export const apiClient = {
   get: async (endpoint: string) => {
-    const response = await fetch(`${API_URL}${endpoint}`);
+    const response = await fetch(`${API_URL}${endpoint}`, {
+      method: 'Get',
+      headers: {
+        'Content-Type': 'application/json',
+        'Authorization': `Bearer ${localStorage.getItem('token')}`
+      }
+    });
     if (!response.ok) throw new Error('Failed to fetch data');
     return response.json();
   },
@@ -12,7 +18,20 @@ export const apiClient = {
     const response = await fetch(`${API_URL}${endpoint}`, {
       method: 'POST',
       headers: {
-        'Content-Type': 'application/json'
+        'Content-Type': 'application/json',
+        'Authorization': `Bearer ${localStorage.getItem('token')}`
+      },
+      body: JSON.stringify(data)
+    });
+    if (!response.ok) throw new Error('Failed to post data');
+    return response.json();
+  },
+  postWithToken: async (endpoint: string, data: any) => {
+    const response = await fetch(`${API_URL}${endpoint}`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'Authorization': `Bearer ${localStorage.getItem('token')}`
       },
       body: JSON.stringify(data)
     });
@@ -39,21 +58,21 @@ export const apiClient = {
 };
 
 export async function fetchExpenses(): Promise<ExpenseWithCategory[]> {
-  return apiClient.get('/api/Expenses');
+  return apiClient.get('/Expenses');
 }
 
 export async function fetchCategories(): Promise<Category[]> {
-  return apiClient.get('/api/Categories');
+  return apiClient.get('/Categories');
 }
 
 export async function createExpense(expense: Omit<Expense, 'id' | 'user_id' | 'created_at' | 'updated_at'>): Promise<Expense> {
-  return apiClient.post('/api/Expenses', expense);
+  return apiClient.post('/Expenses', expense);
 }
 
 export async function updateExpense(id: string, expense: Partial<Expense>): Promise<Expense> {
-  return apiClient.put(`/api/Expenses/${id}`, expense);
+  return apiClient.put(`/Expenses/${id}`, expense);
 }
 
 export async function deleteExpense(id: string): Promise<void> {
-  return apiClient.delete(`/api/Expenses/${id}`);
+  return apiClient.delete(`/Expenses/${id}`);
 }
