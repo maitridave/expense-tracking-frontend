@@ -42,7 +42,8 @@ export const apiClient = {
     const response = await fetch(`${API_URL}${endpoint}`, {
       method: 'PUT',
       headers: {
-        'Content-Type': 'application/json'
+        'Content-Type': 'application/json',
+        'Authorization': `Bearer ${localStorage.getItem('token')}`
       },
       body: JSON.stringify(data)
     });
@@ -51,7 +52,10 @@ export const apiClient = {
   },
   delete: async (endpoint: string) => {
     const response = await fetch(`${API_URL}${endpoint}`, {
-      method: 'DELETE'
+      method: 'DELETE',
+      headers: {
+        'Authorization': `Bearer ${localStorage.getItem('token')}`
+      },
     });
     if (!response.ok) throw new Error('Failed to delete data');
   }
