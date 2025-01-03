@@ -1,4 +1,4 @@
-# Expense Trcking Project
+# Expense Tracking Project
 
 ## Overview
 Managing personal finances is a challenge in today’s complex financial landscape. This web application provides a modern solution to track, manage, and analyze expenses with advanced features like categorization, budgeting tools, and data visualization. Users can set expenses, track spending patterns, and receive insights for financial optimization. The application supports secure multi-user access and integration with external tools like bank APIs. 
