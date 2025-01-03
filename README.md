@@ -41,4 +41,4 @@ To run the project in development mode:
 npm run dev
 ```
 
-The app will be available at `http://localhost:5174/`.
+The app will be available at `http://localhost:51522/`.
