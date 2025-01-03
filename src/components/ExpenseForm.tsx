@@ -37,7 +37,6 @@ export default function ExpenseForm({ initialValues, onSubmit, submitLabel }: Ex
       });
       navigate('/dashboard');
     } catch (err) {
-      debugger;
       setError('Failed to save expense');
     } finally {
       setLoading(false);
