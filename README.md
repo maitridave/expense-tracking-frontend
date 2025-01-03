@@ -8,9 +8,11 @@ Effortlessly manage your finances with our intuitive web application.
 **Key Features:**
 
 * **User Authentication:** Secure login and signup for personalized expense tracking.
+* **View Expense History:** Access a comprehensive list of all recorded expenses for analysis and budgeting.
 * **Effortless Expense Tracking:** Easily add expenses with a user-friendly interface.
 * **Categorization:** Organize your spending with categories to see clearly where your money goes.
 * **Powerful Search:** Quickly find specific expenses using keywords or filters.
+* **Data Visualization:** Gain insightful visual representations of your spending trends through charts and graphs.
 
 
 ## Table of Contents
